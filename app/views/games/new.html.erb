@@ -1,0 +1,26 @@
+<h1>new Game</h1>
+
+<p>HERE ARE YOUR LETTERS :</p>
+
+<%= @letters.join(" - ") %>
+
+<br>
+<br>
+<br>
+
+<p>TYPE YOUR WORD HERE :</p>
+<form action="/score" method="post">
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+<input type="hidden" name="letters" value = "<%= @letters.join%>">
+
+
+
+  <div>
+    <label for="word">What is the longest word you can find?</label>
+    <input type="text" name="word">
+  </div>
+
+  <div>
+    <input type="submit" value="See results!">
+  </div>
+</form>

@@ -1,0 +1,24 @@
+<h1>score</h1>
+
+<p>your word was:</p>
+<%= @word %>
+
+<p>the grid was was:</p>
+<%= params[:letters] %>
+
+<br>
+<br>
+<br>
+<p>Your score:</p>
+<%= @phrase %>
+<br>
+<br>
+<br>
+<p>score cumulé:</p>
+<%= session[:score] %>
+<br>
+<br>
+<br>
+
+<p>new game?</p>
+<%= link_to "new", new_path %>
